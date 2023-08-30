@@ -1,7 +1,9 @@
 import pygame
 
+from colors import Colors
 
-class Visuals:
+
+class Drawing:
     PADDING = 50  # padding from one horizontal side of the window in pixels
     TOP_PADDING = 100  # padding from the top of the window in pixels
 
@@ -22,3 +24,14 @@ class Visuals:
         )
         self.blocks_start = self.PADDING
         self.blocks_end = self.width - self.PADDING
+
+    def draw_list(self, color_blocks={}):
+        for index, value in enumerate(self.list):
+            x = self.blocks_start + (index * self.block_width)
+            y = (self.height) - ((value) * self.block_height)
+            width = self.block_width
+            height = value * self.block_height
+            color = Colors.BLACK
+            if index in color_blocks:
+                color = color_blocks[index]
+            pygame.draw.rect(self.window, color, (x, y, width, height))
