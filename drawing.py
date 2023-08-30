@@ -1,6 +1,6 @@
 import pygame
 
-from colors import Colors
+import colors
 
 
 class Drawing:
@@ -26,7 +26,7 @@ class Drawing:
         self.blocks_end = self.width - self.PADDING
 
     def set_text(self, text):
-        rendered_text = self.FONT.render(text, True, Colors.BLACK)
+        rendered_text = self.FONT.render(text, True, colors.BLACK)
         self.window.blit(
             rendered_text,
             ((self.width / 2) - (rendered_text.get_width() / 2), 20),
@@ -38,7 +38,7 @@ class Drawing:
             y = (self.height) - ((value) * self.block_height)
             width = self.block_width
             height = value * self.block_height
-            color = Colors.BLACK
+            color = colors.BLACK
             if index in color_blocks:
                 color = color_blocks[index]
             pygame.draw.rect(self.window, color, (x, y, width, height))
