@@ -1,4 +1,4 @@
-from colors import colors
+import colors
 
 
 def bubble_sort(list):
