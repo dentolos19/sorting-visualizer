@@ -48,9 +48,13 @@ def main():
             if event.key == pygame.K_r:
                 drawing.set_list(generate_list(100))
                 sorting = False
-            elif event.key == pygame.K_SPACE and not sorting:
-                sorting = True
-                sorting_algorithm_generator = sorting_algorithm(drawing.list)
+            elif event.key == pygame.K_SPACE:
+                if not sorting:
+                    sorting = True
+                    sorting_algorithm_generator = sorting_algorithm(drawing.list)
+                else:
+                    sorting = False
+
 
     pygame.quit()
 

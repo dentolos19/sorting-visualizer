@@ -12,5 +12,5 @@ A simple sorting visualizer made with Python!
 
 ### Keymap
 
-- [`SPACE`] - Start sorting
+- [`SPACE`] - Start or stop sorting
 - [`R`] - Resets list
