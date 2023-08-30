@@ -64,6 +64,9 @@ def main():
                 elif modifier & pygame.KMOD_LCTRL and key[pygame.K_2] and not sorting:
                     sorting_algorithm = Algorithms.insertion_sort
                     sorting_algorithm_name = "Insertion Sort"
+                elif modifier & pygame.KMOD_LCTRL and key[pygame.K_3] and not sorting:
+                    sorting_algorithm = Algorithms.selection_sort
+                    sorting_algorithm_name = "Selection Sort"
 
     pygame.quit()
 

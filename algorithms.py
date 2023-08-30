@@ -25,3 +25,13 @@ class Algorithms:
             list[j + 1] = key
             yield {i: Colors.GREEN, j + 1: Colors.RED}
         return list
+
+    def selection_sort(list):
+        for i in range(len(list)):
+            min_index = i
+            for j in range(i + 1, len(list)):
+                if list[j] < list[min_index]:
+                    min_index = j
+            list[i], list[min_index] = list[min_index], list[i]
+            yield {i: Colors.GREEN, min_index: Colors.RED}
+        return list

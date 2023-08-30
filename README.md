@@ -14,3 +14,6 @@ A simple sorting visualizer made with Python!
 
 - [`SPACE`] - Start or stop sorting
 - [`R`] - Resets list
+- [`CTRL + 1`] - Set algorithm to Bubble Sort
+- [`CTRL + 2`] - Set algorithm to Insertion Sort
+- [`CTRL + 3`] - Set algorithm to Selection Sort
