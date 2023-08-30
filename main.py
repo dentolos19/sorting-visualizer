@@ -20,7 +20,7 @@ def main():
     drawing = Drawing(800, 600)
     drawing.set_list(generate_list(100))
 
-    sorting_algorithm = Algorithms.bubble_sort
+    sorting_algorithm = Algorithms.insertion_sort
     sorting_algorithm_generator = None
 
     clock = pygame.time.Clock()
