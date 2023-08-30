@@ -4,6 +4,7 @@ from colors import Colors
 
 
 class Drawing:
+    FONT = pygame.font.SysFont(None, 32)
     PADDING = 50  # padding from one horizontal side of the window in pixels
     TOP_PADDING = 100  # padding from the top of the window in pixels
 
@@ -12,7 +13,6 @@ class Drawing:
         self.height = height
 
         self.window = pygame.display.set_mode((self.width, self.height))
-        pygame.display.set_caption("Sorting Visualizer")
 
     def set_list(self, list):
         self.list = list
@@ -24,6 +24,13 @@ class Drawing:
         )
         self.blocks_start = self.PADDING
         self.blocks_end = self.width - self.PADDING
+
+    def set_text(self, text):
+        rendered_text = self.FONT.render(text, True, Colors.BLACK)
+        self.window.blit(
+            rendered_text,
+            ((self.width / 2) - (rendered_text.get_width() / 2), 20),
+        )
 
     def draw_list(self, color_blocks={}):
         for index, value in enumerate(self.list):
