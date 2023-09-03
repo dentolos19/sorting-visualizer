@@ -9,7 +9,7 @@ A simple sorting visualizer made with Python!
 
 ## ⚒️ Usage
 
-To simplify the setup process, you can run `start.bat` which automatically creates a Python virtual environment, installs all required dependencies, and starts the application. However, if you prefer to do it manually, you can follow the instructions below.
+You can just run `start.bat` which automatically creates a Python virtual environment, installs all required dependencies, and starts the application. However, if you prefer to do it manually, you can follow the instructions below.
 
 1. Create a Python virtual environment: `py -m venv .venv`
 2. Launch the virtual environment: `.venv/Scripts/activate`
@@ -21,9 +21,10 @@ To simplify the setup process, you can run `start.bat` which automatically creat
 
 - [`SPACE`] - Start or stop sorting
 - [`R`] - Resets list
-- [`CTRL + 1`] - Set algorithm to Bubble Sort
-- [`CTRL + 2`] - Set algorithm to Insertion Sort
-- [`CTRL + 3`] - Set algorithm to Selection Sort
+- [`1`] - Set algorithm to Bubble Sort
+- [`2`] - Set algorithm to Insertion Sort
+- [`3`] - Set algorithm to Selection Sort
+- [`4`] - Set algorithm to Heap Sort
 
 ## 💖 Credits
 

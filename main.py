@@ -1,4 +1,5 @@
 import random
+import time
 
 import pygame
 
@@ -50,7 +51,7 @@ def main():
                 running = False
             if event.type == pygame.KEYDOWN:
                 key = pygame.key.get_pressed()
-                modifier = pygame.key.get_mods()
+                # modifier = pygame.key.get_mods()
                 if key[pygame.K_r]:
                     drawing.set_list(generate_list(100))
                     sorting = False
@@ -60,15 +61,18 @@ def main():
                         sorting = True
                     else:
                         sorting = False
-                elif modifier & pygame.KMOD_LCTRL and key[pygame.K_1] and not sorting:
+                elif key[pygame.K_1] and not sorting:
                     sorting_algorithm = algorithms.bubble_sort
                     sorting_algorithm_name = "Bubble Sort"
-                elif modifier & pygame.KMOD_LCTRL and key[pygame.K_2] and not sorting:
+                elif key[pygame.K_2] and not sorting:
                     sorting_algorithm = algorithms.insertion_sort
                     sorting_algorithm_name = "Insertion Sort"
-                elif modifier & pygame.KMOD_LCTRL and key[pygame.K_3] and not sorting:
+                elif key[pygame.K_3] and not sorting:
                     sorting_algorithm = algorithms.selection_sort
                     sorting_algorithm_name = "Selection Sort"
+                elif key[pygame.K_4] and not sorting:
+                    sorting_algorithm = algorithms.heap_sort
+                    sorting_algorithm_name = "Heap Sort"
 
     pygame.quit()
 
