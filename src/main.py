@@ -38,12 +38,18 @@ def main():
 
         if sorting:
             try:
+                # draw the next step of the sorting algorithm
+                # e.g. the green and red blocks which indicate the current comparison
                 drawing.draw_list(next(sorting_algorithm_generator))
             except StopIteration:
+                # if the sorting is done, stop sorting and reset the generator
                 sorting = False
                 sorting_algorithm_generator = None
         else:
+            # if not sorting, simply draw the list
             drawing.draw_list()
+
+        # update the display to show the overall changes
         pygame.display.update()
 
         for event in pygame.event.get():

@@ -5,5 +5,5 @@ if not exist .venv (
 )
 call .venv/Scripts/activate.bat
 pip install -r requirements.txt >nul
-python main.py
+python src/main.py
 exit
