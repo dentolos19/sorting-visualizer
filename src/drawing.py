@@ -1,3 +1,5 @@
+import warnings
+
 import pygame
 
 import colors
@@ -18,12 +20,19 @@ class Drawing:
         self.list = list
         self.maximum_value = max(self.list)
         self.minimum_value = min(self.list)
-        self.block_width = round((self.width - (self.PADDING * 2)) / len(self.list))
+        self.block_width = max((self.width - (self.PADDING * 2)) / len(self.list), 1)
         self.block_height = round(
             (self.height - self.TOP_PADDING) / (self.maximum_value - self.minimum_value)
         )
         self.blocks_start = self.PADDING
         self.blocks_end = self.width - self.PADDING
+
+        # checks for any blocks that may go out of bounds, issue to be fixed
+        # for index, _ in enumerate(self.list):
+        #     x = self.blocks_start + (index * self.block_width)
+        #     if (x > self.blocks_end):
+        #         warnings.warn("There is block(s) that is out of bounds!")
+        #         break
 
     def set_text(self, text):
         rendered_text = self.FONT.render(text, True, colors.BLACK)

@@ -1,10 +1,11 @@
 import random
-import time
 
 import pygame
 
 import algorithms
 import colors
+
+LIST_LENGTH = 200
 
 
 def generate_list(length, minimum_value=0, maximum_value=100):
@@ -23,7 +24,7 @@ def main():
     sorting = False
 
     drawing = Drawing(800, 600)
-    drawing.set_list(generate_list(100))
+    drawing.set_list(generate_list(LIST_LENGTH))
 
     sorting_algorithm = algorithms.bubble_sort
     sorting_algorithm_name = "Bubble Sort"
@@ -59,7 +60,7 @@ def main():
                 key = pygame.key.get_pressed()
                 # modifier = pygame.key.get_mods()
                 if key[pygame.K_r]:
-                    drawing.set_list(generate_list(100))
+                    drawing.set_list(generate_list(LIST_LENGTH))
                     sorting = False
                 elif key[pygame.K_SPACE]:
                     if not sorting:
