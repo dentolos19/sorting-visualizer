@@ -28,4 +28,4 @@ You can just run `start.bat` which automatically creates a Python virtual enviro
 
 ## 💖 Credits
 
-- Icon by [Becris](https://flaticon.com/free-icon/neural_2103633?term=algorithm&page=1&position=12&origin=search&related_id=2103633)
+- Icon by [Becris](https://flaticon.com/free-icon/neural_2103633)
