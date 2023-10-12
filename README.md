@@ -1,11 +1,11 @@
 <h1>
-    <img src="docs/icon.png" style="height: 1em;"/>
+    <img src="icon.png" style="height: 1em;"/>
     <span>Sorting Visualizer</span>
 </h1>
 
 A simple sorting visualizer made with Python!
 
-![Demo](docs/demo.gif)
+![Demo](demo.gif)
 
 ## ⚒️ Usage
 
@@ -15,7 +15,8 @@ You can just run `start.bat` which automatically creates a Python virtual enviro
 2. Launch the virtual environment: `.venv/Scripts/activate`
 3. Install the required dependencies: `pip install -r requirements.txt`
 4. Run the main script: `./main.py`
-5. Press [`SPACE`] to start sorting!
+5. Press [`SPACE`] to start
+6. Happy sorting!
 
 ### Keymap
 
@@ -28,4 +29,4 @@ You can just run `start.bat` which automatically creates a Python virtual enviro
 
 ## 💖 Credits
 
-- Icon by [Becris](https://flaticon.com/free-icon/neural_2103633)
+- **Icon** by [Becris](https://flaticon.com/free-icon/neural_2103633)
