@@ -1,5 +1,3 @@
-import warnings
-
 import pygame
 
 import colors

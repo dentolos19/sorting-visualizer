@@ -16,7 +16,7 @@ def main():
     pygame.init()
     pygame.font.init()
     pygame.display.set_caption("Sorting Visualizer")
-    pygame.display.set_icon(pygame.image.load("docs/icon.png"))
+    pygame.display.set_icon(pygame.image.load("icon.png"))
 
     from drawing import Drawing
 
