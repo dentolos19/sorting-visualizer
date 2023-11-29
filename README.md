@@ -9,7 +9,7 @@ A simple sorting visualizer made with Python!
 
 ## ⚒️ Usage
 
-You can just run `start.bat` which automatically creates a Python virtual environment, installs all required dependencies, and starts the application.
+To get started, run `start.bat`. No further action is required, but make sure you fulfil the prerequities below! To setup the development environment, run `setup.bat` which will create a Python virtual environment and install all required dependencies automatically.
 
 ### Prerequities
 

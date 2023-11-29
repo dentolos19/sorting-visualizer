@@ -1,9 +1,4 @@
 @echo off
 cd /d %~dp0
-if not exist .venv (
-    py -m venv .venv
-)
-call .venv/Scripts/activate.bat
-pip install -r requirements.txt >nul
-python src/main.py
-exit
+call setup.bat
+python src/main.py %*
