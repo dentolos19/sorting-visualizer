@@ -17,12 +17,12 @@ To get started, run `start.bat`. No further action is required, but make sure yo
 
 ### Keymap
 
-- [`SPACE`] - Start or stop sorting
-- [`R`] - Resets list
-- [`1`] - Set algorithm to Bubble Sort
-- [`2`] - Set algorithm to Insertion Sort
-- [`3`] - Set algorithm to Selection Sort
-- [`4`] - Set algorithm to Heap Sort
+- <kbd>SPACE</kbd> - Start or stop sorting
+- <kbd>R</kbd> - Resets list
+- <kbd>1</kbd> - Set algorithm to Bubble Sort
+- <kbd>2</kbd> - Set algorithm to Insertion Sort
+- <kbd>3</kbd> - Set algorithm to Selection Sort
+- <kbd>4</kbd> - Set algorithm to Heap Sort
 
 ## 💖 Credits
 
