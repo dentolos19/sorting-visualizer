@@ -51,7 +51,9 @@ def heap_sort(list):
 
     return list
 
+
 # definitions below are helper functions for the algorithms above
+
 
 def heap_sort_helper(list, n, i):
     largest = i

@@ -1,9 +1,8 @@
 import random
 
-import pygame
-
 import algorithms
 import colors
+import pygame
 
 LIST_LENGTH = 200
 
@@ -16,7 +15,7 @@ def main():
     pygame.init()
     pygame.font.init()
     pygame.display.set_caption("Sorting Visualizer")
-    pygame.display.set_icon(pygame.image.load("icon.png"))
+    pygame.display.set_icon(pygame.image.load("public/icon.png"))
 
     from drawing import Drawing
 
@@ -28,6 +27,7 @@ def main():
 
     sorting_algorithm = algorithms.bubble_sort
     sorting_algorithm_name = "Bubble Sort"
+    sorting_algorithm_generator = None
 
     clock = pygame.time.Clock()
 
@@ -35,7 +35,7 @@ def main():
         clock.tick(60)
 
         drawing.window.fill(colors.WHITE)
-        drawing.set_text(f"Current Algorithm: {sorting_algorithm_name}")
+        drawing.draw_text(f"Current Algorithm: {sorting_algorithm_name}")
 
         if sorting:
             try:
