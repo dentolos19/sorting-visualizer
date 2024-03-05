@@ -1,10 +1,13 @@
-# Sorting Visualizer
+<h1>
+    <img src="public/icon.png" alt="Icon" height="30">
+    <span>Sorting Visualizer</span>
+</h1>
 
 A simple sorting visualizer made with Python!
 
 ![Demo](public/demo.gif)
 
-## Usage
+## ⚒️ Usage
 
 To get started, run `start.bat`. No further action is required, but make sure you fulfil the prerequisites written below! To setup the development environment, run `setup.bat` which will create a Python virtual environment and install all required dependencies automatically.
 
@@ -15,16 +18,16 @@ To get started, run `start.bat`. No further action is required, but make sure yo
 ### Keymap
 
 - <kbd>SPACE</kbd> - Start or stop sorting
-- <kbd>R</kbd> - Resets list
+- <kbd>R</kbd> - Randomizes list
 - <kbd>1</kbd> - Set algorithm to Bubble Sort
 - <kbd>2</kbd> - Set algorithm to Insertion Sort
 - <kbd>3</kbd> - Set algorithm to Selection Sort
 - <kbd>4</kbd> - Set algorithm to Heap Sort
 
-## Credits
+## 💖 Credits
 
 - **Icon** by [Becris](https://flaticon.com/free-icon/neural_2103633)
 
-## License
+## 📜 License
 
 Distributed under the MIT License. See [LICENSE](LICENSE) for more information.

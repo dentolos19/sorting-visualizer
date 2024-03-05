@@ -1,10 +1,14 @@
-# environment
+# IDE configurations
+.vs/
+.idea/
+
+# Environment files
 .venv/
 
-# output
+# Cache files
 __pycache__/
 
-# miscellaneous
+# Miscellaneous files
 .DS_Store
 Desktop.ini
 Thumbs.db
