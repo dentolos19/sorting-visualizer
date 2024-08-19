@@ -2,12 +2,10 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Debug",
-      "type": "debugpy",
+      "name": "Start",
+      "type": "PowerShell",
       "request": "launch",
-      "preLaunchTask": "setup",
-      "console": "integratedTerminal",
-      "program": "${workspaceFolder}/src/main.py"
+      "script": "${workspaceFolder}/scripts/start.ps1"
     }
   ]
 }
