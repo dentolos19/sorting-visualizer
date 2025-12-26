@@ -1,0 +1,5 @@
+[project]
+name = "sorting-visualizer"
+version = "1.0.0"
+requires-python = ">=3.13"
+dependencies = ["pygame-ce>=2.5.6", "pyinstaller>=6.17.0"]

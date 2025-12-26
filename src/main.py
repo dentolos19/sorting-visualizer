@@ -1,8 +1,9 @@
 import random
 
+import pygame
+
 import algorithms
 import colors
-import pygame
 
 LIST_LENGTH = 200
 
@@ -15,7 +16,7 @@ def main():
     pygame.init()
     pygame.font.init()
     pygame.display.set_caption("Sorting Visualizer")
-    pygame.display.set_icon(pygame.image.load("public/icon.png"))
+    pygame.display.set_icon(pygame.image.load("src/icon.ico"))
 
     from drawing import Drawing
 
