@@ -13,12 +13,12 @@ class Drawing:
         self.height = height
         self.window = pygame.display.set_mode((self.width, self.height))
 
-    def set_list(self, list):
-        self.list = list
+    def set_list(self, values):
+        self.list = values
         self.maximum_value = max(self.list)
         self.minimum_value = min(self.list)
         self.block_width = max((self.width - (self.PADDING * 2)) / len(self.list), 1)
-        self.block_height = round((self.height - self.TOP_PADDING) / (self.maximum_value - self.minimum_value))
+        self.block_height = (self.height - self.TOP_PADDING) / (self.maximum_value - self.minimum_value + 1)
         self.blocks_start = self.PADDING
         self.blocks_end = self.width - self.PADDING
 
@@ -36,15 +36,20 @@ class Drawing:
             ((self.width / 2) - (rendered_text.get_width() / 2), 20),
         )
 
-    def draw_list(self, color_blocks={}):
+    def draw_list(self, color_blocks=None):
+        if color_blocks is None:
+            color_blocks = {}
+
         for index, value in enumerate(self.list):
+            normalized_value = value - self.minimum_value + 1
+
             # calculate the x and y coordinates of the block
             x = self.blocks_start + (index * self.block_width)
-            y = (self.height) - ((value) * self.block_height)
+            y = self.height - (normalized_value * self.block_height)
 
             # calculate the width and height of the block
             width = self.block_width
-            height = value * self.block_height
+            height = normalized_value * self.block_height
 
             # set the default color to black
             color = colors.BLACK

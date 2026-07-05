@@ -6,6 +6,15 @@ import algorithms
 import colors
 
 LIST_LENGTH = 200
+ALGORITHMS = (
+    (pygame.K_1, "Bubble Sort", algorithms.bubble_sort),
+    (pygame.K_2, "Insertion Sort", algorithms.insertion_sort),
+    (pygame.K_3, "Selection Sort", algorithms.selection_sort),
+    (pygame.K_4, "Heap Sort", algorithms.heap_sort),
+    (pygame.K_5, "Merge Sort", algorithms.merge_sort),
+    (pygame.K_6, "Quick Sort", algorithms.quick_sort),
+    (pygame.K_7, "Shell Sort", algorithms.shell_sort),
+)
 
 
 def generate_list(length, minimum_value=0, maximum_value=100):
@@ -26,8 +35,7 @@ def main():
     drawing = Drawing(800, 600)
     drawing.set_list(generate_list(LIST_LENGTH))
 
-    sorting_algorithm = algorithms.bubble_sort
-    sorting_algorithm_name = "Bubble Sort"
+    _, sorting_algorithm_name, sorting_algorithm = ALGORITHMS[0]
     sorting_algorithm_generator = None
 
     clock = pygame.time.Clock()
@@ -58,29 +66,22 @@ def main():
             if event.type == pygame.QUIT:
                 running = False
             if event.type == pygame.KEYDOWN:
-                key = pygame.key.get_pressed()
-                # modifier = pygame.key.get_mods()
-                if key[pygame.K_r]:
+                if event.key == pygame.K_r:
                     drawing.set_list(generate_list(LIST_LENGTH))
                     sorting = False
-                elif key[pygame.K_SPACE]:
+                    sorting_algorithm_generator = None
+                elif event.key == pygame.K_SPACE:
                     if not sorting:
                         sorting_algorithm_generator = sorting_algorithm(drawing.list)
                         sorting = True
                     else:
                         sorting = False
-                elif key[pygame.K_1] and not sorting:
-                    sorting_algorithm = algorithms.bubble_sort
-                    sorting_algorithm_name = "Bubble Sort"
-                elif key[pygame.K_2] and not sorting:
-                    sorting_algorithm = algorithms.insertion_sort
-                    sorting_algorithm_name = "Insertion Sort"
-                elif key[pygame.K_3] and not sorting:
-                    sorting_algorithm = algorithms.selection_sort
-                    sorting_algorithm_name = "Selection Sort"
-                elif key[pygame.K_4] and not sorting:
-                    sorting_algorithm = algorithms.heap_sort
-                    sorting_algorithm_name = "Heap Sort"
+                elif not sorting:
+                    for key, algorithm_name, algorithm in ALGORITHMS:
+                        if event.key == key:
+                            sorting_algorithm = algorithm
+                            sorting_algorithm_name = algorithm_name
+                            break
 
     pygame.quit()
 
