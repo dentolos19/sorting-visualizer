@@ -16,7 +16,7 @@ def main():
     pygame.init()
     pygame.font.init()
     pygame.display.set_caption("Sortinator")
-    pygame.display.set_icon(pygame.image.load("src/icon.ico"))
+    pygame.display.set_icon(pygame.image.load("icon.ico"))
 
     from drawing import Drawing
 

@@ -5,7 +5,7 @@
       "name": "App",
       "request": "launch",
       "type": "debugpy",
-      "program": "${workspaceFolder}/src/main.py"
+      "program": "${workspaceFolder}/main.py"
     }
   ]
 }

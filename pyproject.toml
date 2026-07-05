@@ -2,4 +2,10 @@
 name = "sortinator"
 version = "1.0.0"
 requires-python = ">=3.13"
-dependencies = ["pygame-ce", "pyinstaller"]
+dependencies = ["pygame-ce"]
+
+[dependency-groups]
+dev = ["ruff"]
+
+[tool.ruff]
+line-length = 120
